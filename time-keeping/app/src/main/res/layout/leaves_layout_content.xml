@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View style="@style/lineWhite" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:text="@string/title_leave_total"
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_blue_200"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="2dp">
+
+                            <TextView
+                                android:id="@+id/tvLeaveTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvTitleDays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="@string/title_days"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_blue_200"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View style="@style/lineWhite" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:text="@string/total_leave_used"
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_blue_200"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="2dp">
+
+                            <TextView
+                                android:id="@+id/tvLeaveUsed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvTitleDays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="@string/title_days"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_blue_200"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp">
+
+                    <ImageView
+                        android:id="@+id/ivMonthBack"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_pressed_icon_white"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_month_back" />
+
+                    <TextView
+                        android:id="@+id/tvMonthYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/background_pressed_white"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="month/year"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/ivMonthNext"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/background_pressed_icon_white"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_month_next" />
+                </RelativeLayout>
+                <View style="@style/lineGrey" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/listRequestLeaves"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</merge>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <!--<ListView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:id="@+id/lv_menu"-->
+    <!--android:layout_above="@+id/logout_btn"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--</ListView>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            style="@style/layoutItemDrawer">
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/textDrawer"
+                android:text="User"
+                android:textSize="22sp" />
+            <TextView
+                android:id="@+id/tvID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"/>
+
+            <View
+                style="@style/lineGrey"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCheckInOut"
+            style="@style/layoutItemDrawer">
+
+            <TextView
+                android:id="@+id/tvCheckInOut"
+
+                style="@style/textDrawer"
+                android:text="@string/nav_check_in_out" />
+
+            <View
+                style="@style/lineGrey"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLeaveApp"
+            style="@style/layoutItemDrawer">
+
+            <TextView
+                android:id="@+id/tvLeaveApp"
+                style="@style/textDrawer"
+                android:text="@string/nav_leave_app" />
+
+            <View
+                style="@style/lineGrey"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutChangePassword"
+            style="@style/layoutItemDrawer"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvChangePassword"
+                style="@style/textDrawer"
+                android:text="@string/nav_change_password" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_pressed_logout"
+        android:text="@string/btn_log_out"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

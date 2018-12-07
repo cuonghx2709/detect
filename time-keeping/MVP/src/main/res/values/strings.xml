@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Base</string>
+    <string name="title_error">Lỗi</string>
+    <string name="ok">Đồng ý</string>
+    <string name="loading">Hệ thống đang xử lý…</string>
+    <string name="cancel">Huỷ</string>
+    <string name="title_network_lost">Lỗi kết nối đến hệ thống</string>
+    <string name="msg_network_lost">Vui lòng kiểm tra kết nối mạng và thử lại</string>
+    <string name="has_no_phone_card">Thiết bị hiện không có thẻ SIM</string>
+    <string name="title_alert">Thông báo</string>
+    <string name="lost_connection">Lỗi kết nối đến hệ thống. Vui lòng kiểm tra lại kết nối mạng và thử lại.</string>
+</resources>

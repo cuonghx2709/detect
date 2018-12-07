@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/tool_edit_time_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutTimeStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_pressed_white"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/titleStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:hint="@string/hint_start"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTimeStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="sadf"
+                android:textColor="@color/md_blue_400"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_calendar" />
+        </RelativeLayout>
+
+        <View style="@style/lineGrey" />
+
+        <RelativeLayout
+            android:id="@+id/layoutTimeEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_pressed_white"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/titleEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:hint="@string/title_end"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTimeEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="sadf"
+                android:textColor="@color/md_blue_400"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_calendar" />
+        </RelativeLayout>
+
+        <View style="@style/lineGrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:hint="@string/title"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinTitle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="12dp"
+                android:backgroundTint="@color/dark_grey" />
+
+        </LinearLayout>
+
+        <View style="@style/lineGrey" />
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/fieldDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:backgroundTint="@color/white"
+            android:hint="@string/edittext_hint"
+            android:imeOptions="actionDone"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/md_green_400"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+</LinearLayout>

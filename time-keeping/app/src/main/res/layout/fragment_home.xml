@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_sc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/ivDrawer"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/backgroud_pressed_icon_primary"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_drawer" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Check in/out"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="user"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/backgroud_pressed_icon_primary"
+                        android:padding="12dp"
+                        android:src="@drawable/ring_notif"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/detect_iv"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/backgroud_pressed_icon_primary"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_home_detect" />
+                    <ImageView
+                        android:id="@+id/qr_code_ic"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/backgroud_pressed_icon_primary"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_action_name" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal"
+                            android:paddingLeft="32dp"
+                            android:paddingRight="32dp">
+
+                            <ImageView
+                                android:id="@+id/ivMonthBack"
+                                android:layout_width="48dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/background_pressed_icon_white"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_month_back" />
+
+                            <TextView
+                                android:id="@+id/calendar_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:backgroundTint="@color/transparent"
+                                android:gravity="center"
+                                android:text="07/2017"
+                                android:background="@drawable/background_pressed_white"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="24sp" />
+
+                            <ImageView
+                                android:id="@+id/ivMonthNext"
+                                android:layout_width="48dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/background_pressed_icon_white"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_month_next" />
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:background="@android:color/white">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="@string/title_total_count"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/tvTotalCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/md_teal_400"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="8dp"
+                                android:textSize="16sp"
+                                android:text="total count"/>
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/check_in_out_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llQrcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/put_device"
+            android:background="@color/transparent"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/put_device_horizontal"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+
+</LinearLayout>

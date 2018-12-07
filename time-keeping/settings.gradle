@@ -1,0 +1,2 @@
+include ':app', ':qrlib', ':zxing-android'
+include ':MVP'

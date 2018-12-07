@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/md_light_blue_700</color>
+    <color name="colorPrimaryDark">@color/md_light_blue_800</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="colorBackgroundPrimary">@color/md_light_blue_400</color>
+
+
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <item name="gray_holo_light" type="color">#ffd0d0d0</item>
+
+</resources>
